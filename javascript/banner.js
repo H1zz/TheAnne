@@ -29,9 +29,6 @@ let changeImg = function(num){
     // }    
     document.getElementById('Banner_01').src = mobile_banner[current];
     document.getElementById('web_Banner_01').src = web_banner[current];
-    document.getElementById('Ad1Banner_01').src = ad1[current];
-    document.getElementById('Ad22Banner_01').src = ad2[current];    
-    document.getElementById('Ad3Banner_01').src = ad3[current];
 }
 
 // 按鈕執行 方法
