@@ -1,0 +1,57 @@
+#Web_header {
+  display: none;
+}
+#Mobile_header {
+  #Mobile_Nav {
+    width: 100%;
+    border-bottom: 1px gray solid;
+    display: flex;
+    justify-content: space-between;
+    #Mobile_Logo {
+      margin: 0px;
+      width: 15vw;
+      height: 15vw;
+      flex: none;
+    }
+    #Mobile_Love {
+      margin: 0px;
+      width: 15vw;
+      height: 15vw;
+      flex: none;
+    }
+  }
+  #Mobile_Search {
+    display: flex;
+    border-bottom: gray 1px solid;
+    background-color: lightgray;
+    #MSearch {
+      width: 100%;
+      height: 10vw;
+      margin: 15px 20px 15px 20px;
+      text-align: center;
+    }
+  }
+  #Mobile_Navbar {
+    z-index: 10;
+    background-color: var(--pink);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    #Mobile_Close,
+    #Mobile_Menu {
+      height: 15vw;
+      width: 15vw;
+    }
+    a {
+      // float: left;
+      height: 15vw;
+      width: 15vw;
+    }
+    // #Mobile_home :hovor {
+    //   background-color: violet;
+    //   transition: var (--tran01);
+    // }
+  }
+}

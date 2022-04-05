@@ -1,0 +1,167 @@
+Item();
+// 新增商品數量
+function Item(){
+    // 新增標籤 section
+    let sec = document.createElement('section');
+
+    // 在Mobile_article內新增 section
+    let SE = document.getElementById('Mobile_article')
+
+    // 建立 section 框架
+    SE.appendChild(sec);
+
+    // 並給予class&id名稱
+    sec.setAttribute("class","Items");
+    sec.setAttribute("id","Items")
+
+    // --------------------------------------------------------------
+
+    // 新增ul 標籤
+    let ul = document.createElement('ul');
+
+    // 在Items內新增ul 
+    let Item_id = document.getElementById('Items');
+
+    // 建立 ul 框架
+    Item_id.appendChild(ul);
+    
+    // 給予id名稱
+    ul.setAttribute("id","ItemBox");
+
+    // 設計迴圈
+    // li在 ItemBox 框架內產生
+    let ItemBox_id = document.getElementById('ItemBox');
+    
+    // 宣告 li 的 class 名稱 array陣列
+    let liClass = ['Title','Number','Script'];
+
+    // 宣告 li 的內容
+    let liScript = ['卡比','庫存','數量有限,售完為止'];
+
+    // for 迴圈
+    // for(let i=0;i<liClass.length;i++){
+    //     // 建立li 
+    //     let li = document.createElement('li');
+
+    //     // 在ItemBox(33行)內新增li
+    //     ItemBox_id.appendChild(li);
+
+    //     // 新增class屬性
+    //     li.setAttribute("class",liClass[i]);
+
+    //     // 置入內容
+    //     li.innerText = liScript[i];
+    // }
+
+    Forli(liClass,ItemBox_id,liScript)
+
+
+    function Forli(Class,IDName,Script){
+        for(let i=0;i<Class.length;i++){
+            // 建立li 
+            let li = document.createElement('li');
+    
+            // 在ItemBox(33行)內新增li
+            IDName.appendChild(li);
+    
+            // 新增class屬性
+            li.setAttribute("class",Class[i]);
+    
+            // 置入內容
+            li.innerHTML = Script[i];
+        }
+        // 終止函式執行
+        return;
+    }
+
+    // 建立 class 的變數 
+    // let Script_class = ItemBox_id.getElementsByClassName('Number')[0];
+    
+    // querySelector() 在文件匹配指定 css 選擇器
+    let Script_class = ItemBox_id.querySelector('.Number');
+
+    // 建立 span 標籤
+    let span =document.createElement('span');
+    
+    // 在Script內建立 span
+    Script_class.appendChild(span);
+
+    span.innerText = '1';    
+    // --------------------------------------------------------------
+
+    // 設定 div class 名稱陣列
+    let div_class = ['image','name','brief'];
+
+    for(let i=0;i<div_class.length;i++){        
+    // 新增 div 的框架，宣告變數
+    let div = document.createElement('div');
+
+    // 在ItemBox(33行)
+    Items.appendChild(div);
+
+    // 新增屬性
+    div.setAttribute('class',div_class[i]);
+    }
+
+    // image 內新增資料
+    let a = document.createElement('a');
+
+    // 新增 連結 屬性
+    a.setAttribute("herf","#");
+    // 宣告 指定 class 的變數
+    let image = Items.querySelector('.image');
+    // 在 image內新增
+    image.appendChild(a);
+
+    // image>a內新增資料
+    let img = document.createElement('img');
+    // 屬性
+    img.setAttribute("src","../img/items/kirby.png");
+    // 在a內新增
+    a.appendChild(img);
+
+    // 在name 內新增資料 h3 li
+    let h3 = document.createElement('h3');
+    let li = document.createElement('li');
+    // 屬性
+    li.setAttribute("class","love");
+    // 在 name 內新增
+    let name = Items.querySelector('.name');
+    name.appendChild(h3).innerText="商品名稱";
+    name.appendChild(li).innerText="我的最愛";
+
+    // 在 brief內新增 html 資料
+    let brief = Items.querySelector('.brief');
+    brief.innerHTML = "商品簡介<mark>酷酷的</mark>";
+
+    // --------------------------------------------------------------
+    // 價格
+    // 在Items新增標籤ul
+    // 新增屬性
+    ul.setAttribute("id","PriceBox");
+    // 建立ul
+    Items.appendChild(ul);
+    
+
+}
+
+
+
+
+<div class="Item">
+            <div class="images">
+                <a href="javascript:;">
+                    <img src="img/items/kirby.png" alt="">
+                </a>
+            </div>
+            <ul class="script1">
+                <li id="sort1">玩具</li>
+                <li id="size1">One-Size</li>
+            </ul>
+            <ul class="script2">
+                <li id="name">KIRBY</li>
+                <li id="sales">NT$<span>800</span>元</li>
+                <li id="origin">原價NT$<span><s>1000</s></span>元</li>
+            </ul>
+            <!-- span行內範圍 s刪除線 -->
+        </div>
